@@ -33,6 +33,11 @@ export default function Home() {
         return;
       }
 
+      // Log para debug
+      if (geoResult.cached) {
+        console.log('⚡ Resultado instantâneo do cache!');
+      }
+
       // Passo 2: Carregar dados GeoJSON
       const geoData = await loadGeoJSON();
 

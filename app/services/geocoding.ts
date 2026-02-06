@@ -1,9 +1,11 @@
 // Serviço de Geocodificação usando Nominatim (OpenStreetMap)
+import { cache, getCacheKey } from './cache';
 
 export interface GeocodingResult {
   lat: number;
   lon: number;
   display_name: string;
+  cached?: boolean; // Indica se veio do cache
 }
 
 // Função auxiliar para fetch com timeout
@@ -25,6 +27,20 @@ async function fetchWithTimeout(url: string, options: RequestInit = {}, timeout 
 }
 
 export async function geocodeAddress(address: string): Promise<GeocodingResult | null> {
+  // 1. Verificar cache primeiro
+  const cacheKey = getCacheKey(address);
+  const cachedResult = cache.get<GeocodingResult>(cacheKey);
+
+  if (cachedResult) {
+    console.log('✅ Endereço encontrado no cache (resposta instantânea)');
+    return {
+      ...cachedResult,
+      cached: true,
+    };
+  }
+
+  // 2. Se não está no cache, buscar na API
+  console.log('🔍 Buscando endereço na API...');
   const encodedAddress = encodeURIComponent(address);
 
   // Lista de servidores Nominatim (backup)
@@ -56,11 +72,18 @@ export async function geocodeAddress(address: string): Promise<GeocodingResult |
         return null;
       }
 
-      return {
+      const result: GeocodingResult = {
         lat: parseFloat(data[0].lat),
         lon: parseFloat(data[0].lon),
         display_name: data[0].display_name,
+        cached: false,
       };
+
+      // 3. Salvar no cache para futuras buscas
+      cache.set(cacheKey, result, 30); // Expira em 30 dias
+      console.log('💾 Endereço salvo no cache');
+
+      return result;
     } catch (error) {
       console.error(`Erro no servidor ${server}:`, error);
       // Continua para próximo servidor
