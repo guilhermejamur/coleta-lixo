@@ -4,7 +4,7 @@
     {
       "type": "Feature",
       "properties": {
-        "bairro": "Centro",
+        "bairro": "Centro / República",
         "lixo_comum": "Segunda, Quarta e Sexta - 07:00",
         "lixo_reciclavel": "Terça - 08:00"
       },
@@ -12,11 +12,11 @@
         "type": "Polygon",
         "coordinates": [
           [
-            [-46.6333, -23.5505],
-            [-46.6333, -23.5605],
-            [-46.6233, -23.5605],
-            [-46.6233, -23.5505],
-            [-46.6333, -23.5505]
+            [-46.650, -23.540],
+            [-46.650, -23.555],
+            [-46.630, -23.555],
+            [-46.630, -23.540],
+            [-46.650, -23.540]
           ]
         ]
       }
@@ -24,7 +24,7 @@
     {
       "type": "Feature",
       "properties": {
-        "bairro": "Vila Mariana",
+        "bairro": "Vila Mariana / Paraíso",
         "lixo_comum": "Terça, Quinta e Sábado - 19:00",
         "lixo_reciclavel": "Quarta - 14:00"
       },
@@ -32,11 +32,11 @@
         "type": "Polygon",
         "coordinates": [
           [
-            [-46.6433, -23.5705],
-            [-46.6433, -23.5805],
-            [-46.6333, -23.5805],
-            [-46.6333, -23.5705],
-            [-46.6433, -23.5705]
+            [-46.650, -23.570],
+            [-46.650, -23.590],
+            [-46.630, -23.590],
+            [-46.630, -23.570],
+            [-46.650, -23.570]
           ]
         ]
       }
@@ -44,7 +44,7 @@
     {
       "type": "Feature",
       "properties": {
-        "bairro": "Jardim Paulista",
+        "bairro": "Consolação / Jardim Paulista",
         "lixo_comum": "Segunda, Quarta e Sexta - 20:00",
         "lixo_reciclavel": "Quinta - 09:00"
       },
@@ -52,11 +52,51 @@
         "type": "Polygon",
         "coordinates": [
           [
-            [-46.6633, -23.5605],
-            [-46.6633, -23.5705],
-            [-46.6533, -23.5705],
-            [-46.6533, -23.5605],
-            [-46.6633, -23.5605]
+            [-46.670, -23.555],
+            [-46.670, -23.575],
+            [-46.650, -23.575],
+            [-46.650, -23.555],
+            [-46.670, -23.555]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "bairro": "Pinheiros / Vila Madalena",
+        "lixo_comum": "Segunda, Quarta e Sexta - 18:00",
+        "lixo_reciclavel": "Terça - 10:00"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-46.700, -23.555],
+            [-46.700, -23.575],
+            [-46.680, -23.575],
+            [-46.680, -23.555],
+            [-46.700, -23.555]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "bairro": "Moema / Itaim Bibi",
+        "lixo_comum": "Terça, Quinta e Sábado - 20:00",
+        "lixo_reciclavel": "Segunda - 15:00"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-46.680, -23.585],
+            [-46.680, -23.605],
+            [-46.660, -23.605],
+            [-46.660, -23.585],
+            [-46.680, -23.585]
           ]
         ]
       }
