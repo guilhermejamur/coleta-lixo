@@ -33,8 +33,9 @@ export async function loadGeoJSON(): Promise<GeoJSONData> {
     if (!response.ok) {
       throw new Error('Erro ao carregar dados de coleta');
     }
-    cachedGeoJSON = await response.json();
-    return cachedGeoJSON;
+    const data: GeoJSONData = await response.json();
+    cachedGeoJSON = data;
+    return data;
   } catch (error) {
     console.error('Erro ao carregar GeoJSON:', error);
     throw error;
