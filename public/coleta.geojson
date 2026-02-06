@@ -1,0 +1,65 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "bairro": "Centro",
+        "lixo_comum": "Segunda, Quarta e Sexta - 07:00",
+        "lixo_reciclavel": "Terça - 08:00"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-46.6333, -23.5505],
+            [-46.6333, -23.5605],
+            [-46.6233, -23.5605],
+            [-46.6233, -23.5505],
+            [-46.6333, -23.5505]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "bairro": "Vila Mariana",
+        "lixo_comum": "Terça, Quinta e Sábado - 19:00",
+        "lixo_reciclavel": "Quarta - 14:00"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-46.6433, -23.5705],
+            [-46.6433, -23.5805],
+            [-46.6333, -23.5805],
+            [-46.6333, -23.5705],
+            [-46.6433, -23.5705]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "bairro": "Jardim Paulista",
+        "lixo_comum": "Segunda, Quarta e Sexta - 20:00",
+        "lixo_reciclavel": "Quinta - 09:00"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-46.6633, -23.5605],
+            [-46.6633, -23.5705],
+            [-46.6533, -23.5705],
+            [-46.6533, -23.5605],
+            [-46.6633, -23.5605]
+          ]
+        ]
+      }
+    }
+  ]
+}
